@@ -1,5 +1,5 @@
 import React from "react";
-import Modal from "../components/Modal";
+import {Modal} from "../components/Modal";
 
 export default {
     title: "My UI components/Modal",
@@ -7,6 +7,7 @@ export default {
 }
 
 const Template = (args) => <Modal {...args} />
+
 export const My_Modal = Template.bind({});
 My_Modal.args = {
     primary: true,

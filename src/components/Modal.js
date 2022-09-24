@@ -1,8 +1,67 @@
 import React from "react";
 import { useState } from "react";
-import style from "../style/Modal.css";
+import styled from "styled-components";
 
-const Modal = () => {
+export const ModalContainer = styled.div`
+    position: relative;
+    border: 1px solid gray;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 1rem;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+export const ModalBackdrop = styled.div`
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+export const ModalView = styled.div`
+    z-index: 100;
+    background: white;
+    width: 400px;
+    height: 200px;
+    font-size: 15px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    > button {
+        margin-top: 10px;
+        margin-left: 350px;
+        width: 25px; height: 25px;
+        text-align: center;
+        border-radius: 1rem;
+        background-color: #F4E5FF;
+        color: #818181;
+        border: none;
+    }
+
+    > div {
+        margin-top: 60px;
+    }
+`
+export const ModalBtn = styled.button`
+    width: 150px;
+    height: 50px;
+    border-radius: 1rem;
+    border: none;
+    background-color: #F4E5FF;
+    font-size: 15px;
+
+    &:hover {
+        background-color: #D9ADF9;
+    }
+`
+
+export const Modal = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const openModalHandler = () => {
@@ -10,23 +69,25 @@ const Modal = () => {
         else setIsOpen(true);
     }
     return (
-        <div className="ModalContainer">
-            {
-                isOpen ? <div className="ModalBackdrop" onClick={openModalHandler}>
-                    <div className="ModalView" onClick={(e) => e.stopPropagation()}>
-                        <button onClick={openModalHandler}><a>X</a></button>
-                        <div>안뇽 모달창</div>
-                    </div>
-                </div>
-                : null
-            }
-            <button className="ModalBtn" onClick={openModalHandler}>
+        <>
+            <ModalContainer>
                 {
-                    `${isOpen ? "Opened!" : "Open Modal"}`
+                    isOpen ? <ModalBackdrop onClick={openModalHandler}>
+                        <ModalView onClick={(e) => e.stopPropagation()}>
+                            <button onClick={openModalHandler}><a>X</a></button>
+                            <div>안뇽 모달창</div>
+                        </ModalView>
+                    </ModalBackdrop>
+                        : null
                 }
-            </button>
-        </div>
+                <ModalBtn onClick={openModalHandler}>
+                    {
+                        `${isOpen ? "Opened!" : "Open Modal"}`
+                    }
+                </ModalBtn>
+            </ModalContainer>                
+        </>
+        
+        
     )
 }
-
-export default Modal;

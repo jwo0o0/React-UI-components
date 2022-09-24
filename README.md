@@ -13,5 +13,9 @@ Storybook 실행 📎http://localhost:6006
 ![Modal_AdobeExpress](https://user-images.githubusercontent.com/70098708/192101854-5c0c03f9-538c-4ae3-a032-253b695dc67b.gif)
 
 ## Toggle
-![Toggle_AdobeExpress](https://user-images.githubusercontent.com/70098708/192101874-79c8bac7-5a74-419a-bf58-e6241da345b0.gif)
+![Toggle_AdobeExpress](https://user-images.githubusercontent.com/70098708/192104861-bf862dfc-cd48-46c7-a022-b645c9bb3af9.gif)
+
+## Tab
+![Tab_AdobeExpress](https://user-images.githubusercontent.com/70098708/192104870-2b6ac0f4-6596-47f5-8f0d-fafdf8192732.gif)
+
 

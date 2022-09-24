@@ -4,6 +4,7 @@ import './index.css';
 import Title from './components/Title';
 import { Modal } from './components/Modal';
 import { Toggle } from './components/Toggle';
+import { Tab } from './components/Tab';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,6 +12,7 @@ root.render(
     <Title />
     <Modal />
     <Toggle />
+    <Tab />
   </React.StrictMode>
 );
 

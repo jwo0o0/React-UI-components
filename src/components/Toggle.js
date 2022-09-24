@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
 
-export const ToggleContainer = styled.div`
+export const Container = styled.div`
     border: 1px solid gray;
     margin: 10px;
     padding: 10px;
@@ -11,7 +11,8 @@ export const ToggleContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
+`
+export const ToggleContainer = styled.div`
     .box {
         position: relative;
         z-index: -1;
@@ -22,7 +23,6 @@ export const ToggleContainer = styled.div`
         height: 24px;
         border-radius: 30px;
         background-color: #8b8b8b;
-        cursor: pointer;
         &.toggle--checked {
             background-color: #73D989;
         }
@@ -41,6 +41,10 @@ export const ToggleContainer = styled.div`
             left: 27px;
         }
     }
+
+    &:hover {
+        cursor: pointer;
+    }
 `
 
 export const Toggle = () => {
@@ -51,14 +55,14 @@ export const Toggle = () => {
     }
 
     return (
-        <>
+        <Container>
             <ToggleContainer onClick={toggleHandler}>
                 <div className="box">
                     <div className={`toggle-container ${isOn ? "toggle--checked" : ""}`}></div>
                     <div className={`toggle-circle ${isOn ? "toggle--checked" : ""}`}></div>
                 </div>
             </ToggleContainer>
-        </>
+        </Container>
         
     )
 }

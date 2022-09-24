@@ -26,11 +26,12 @@ export const TabMenu = styled.ul`
         display: flex;
         justify-content: center;
         align-items: center;
-
-        &:hover {
-            background-color: #D9ADF9;
-            cursor: pointer;
-        }
+    }
+    .focused {
+        background-color: #D9ADF9;
+    }
+    &:hover {
+        cursor: pointer;
     }
 `;
 

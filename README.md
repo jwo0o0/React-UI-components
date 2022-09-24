@@ -3,7 +3,7 @@
 
 <b>npm run start</b>
 
-리액트 app 실행 📎http://localhost:3000/
+리액트 app 실행 📎http://localhost:3000
 
 <b>npm run storybook</b>
 

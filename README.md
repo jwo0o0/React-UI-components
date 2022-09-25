@@ -18,4 +18,6 @@ Storybook 실행 📎http://localhost:6006
 ## Tab
 ![Tab_AdobeExpress](https://user-images.githubusercontent.com/70098708/192104870-2b6ac0f4-6596-47f5-8f0d-fafdf8192732.gif)
 
+## Tag
+![Tag_AdobeExpress](https://user-images.githubusercontent.com/70098708/192138476-b4e349da-ffe9-4d5a-b253-a71d10bd4b09.gif)
 
